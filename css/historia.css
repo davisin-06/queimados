@@ -1,0 +1,141 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --fonte-principal: 'Roboto Condensed', sans-serif;
+    --fonte-texto: 'Roboto', sans-serif;
+    --fonte-creditos: 'Outfit', sans-serif;
+    --cor-de-fundo: #000b19;
+    --cor-de-texto: #ffffff;
+    --link-clicado: #004195;
+    --cor-de-texto-secundaria: #c0c0c0;
+    --tamanho-fonte-titulo: 2.5em;
+    --tamanho-fonte-topico: 1em;
+    --tamanho-fonte-creditos: 0.8em;
+    --topico-não-clicado: linear-gradient(0deg, #000b19,#00204a);
+    --topico-clicado: linear-gradient(0deg, #004195,#001837);
+    --imagem-de-fundo: url('../img/historia_background.png');
+}
+
+body {
+    display: grid;
+    grid-template-rows: 90% 10%;
+    justify-content: center;
+
+    background-color: var(--cor-de-fundo);
+    height: 100vh;
+    width: 100vw;
+
+    color: var(--cor-de-texto);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-principal);
+}
+
+img {
+    width: auto;
+    height: auto; 
+    margin-right: 1em;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    width: 100vw;
+    height: 100%;
+
+    padding-left: 9em;
+    padding-top: 4%;
+    gap: 1em;
+
+    text-align: left;
+
+    background-image: var(--imagem-de-fundo);
+    background-size: cover;
+}
+
+.main_titulo{
+    font-size: var(--tamanho-fonte-titulo);
+    font-weight: 700;
+    text-shadow: 3px 3px 5px #000000;
+}
+.main_conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    
+    width: 35em;
+    height: 10em;
+
+    gap: 0.8em;
+
+    font-family: var(--fonte-texto);
+    text-align: justify;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    padding-top: 1em;
+
+    font-family: var(--fonte-creditos);
+    color: var(--cor-de-texto-secundaria);
+    font-size: var(--tamanho-fonte-creditos);
+}
+
+.link_escola{
+    color: var(--cor-de-texto-secundaria);
+    text-decoration: none;
+}
+
+.link_escola:hover {
+    color: var(--link-clicado);
+    text-decoration: underline;
+}
+.caixa_voltar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    left: 11.5em;
+    bottom: 5em;
+    
+    text-decoration: none;
+}
+
+.caixa_voltar:hover {
+    transform: scale(1.1);
+    transition: all 0.2s;
+
+    cursor: pointer;
+    filter: brightness(1.2);
+
+    text-decoration: none;
+
+    padding: 0.2em;
+
+}
+
+.caixa_voltar h3 {
+    margin-top: 0.5em;
+ 
+    font-size: 2em;
+    color: var(--cor-de-texto-secundaria);
+    font-family: var(--fonte-creditos);
+    font-weight: 500;
+}
+
